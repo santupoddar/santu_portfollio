@@ -1,0 +1,918 @@
+/*===================uni================*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    line-height: 1.5;
+}
+:root{
+    --white: white;
+    --black: black;
+    --dark-black: rgb(37, 36, 36);
+    --dark-white: rgb(236, 234, 234);
+    --sky: rgba(0, 174, 255);
+    --light-sky: #0d6ad4;
+    --blue: blue;
+    --ligt-blue: rgb(0, 26, 255);
+    --dark-blue: #09294D;
+
+}
+.com-gap{
+    padding: 100px 0;
+}
+.btn{
+    color: var(--white);
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 20px;
+    background-color: var(--sky);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.btn:hover{
+  background-color: var(--blue);
+  color: var(--white);
+  transition: all 1,2s ease;
+}
+/*===============heading===========*/
+.heding-all{
+    width: 50%;
+}
+.heading{
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+.heading-1{
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+.heading-2{
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--sky);
+}
+.heading-3{
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--blue);
+}
+.heading .heading-2::after{
+    content: "";
+    width: 13%;
+    background-color: var(--ligt-blue);
+    height: 2px;
+    position: absolute;
+    left: 44%;
+    bottom: -10%;
+}
+/*=============sub-heading===========*/
+.text{
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    display: block;
+    color: var(--sky);
+}
+.text-one{
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+.ban-text{
+    font-family: "Montserrat", sans-serif;
+    color: var(--sky);
+}
+.text-abt{
+    font-family: "Montserrat", sans-serif;
+    color: var(--sky);
+}
+/*================img===================*/
+img{
+    max-width: 100%;
+}
+section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+figure img{
+    display: block;
+}
+/*=====================header==================*/
+.header{
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--dark-blue);
+    position: fixed;
+    z-index: 1;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    display: block;
+}
+.nav-text{
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--sky);
+    font-weight: 700;
+    line-height: 1.1;
+}
+.nav-menu{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.nav-menu li{
+    margin: 0 15px;
+}
+.nav-menu li a{
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    text-transform: capitalize;
+    color: var(--white);
+    font-size: 19px;
+    line-height: 1.1;
+    font-weight: 400;
+    position: relative;
+}
+.nav-menu li a:hover{
+    color: var(--sky);
+    transition: all 1,2s ease;
+}
+.icon{
+    display: none;
+}
+.icon a i{
+    color: var(--white);
+    font-size: 20px;
+}
+.nav-menu li a::after{
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -10px; 
+    background-color: var(--white);
+    position: absolute;
+    height: 2px;
+    transition: 1s all ease;
+}
+.nav-menu li a::before{
+    content: "";
+    width: 0;
+    right: 0;
+    top: -10px; 
+    background-color: var(--white);
+    position: absolute;
+    height: 2px;
+    transition: 1s all ease;
+}
+.nav-menu li a:hover::after,
+.nav-menu li a:hover::before{
+    width: 100%;
+}
+/*=====================banner==================*/
+.banner{
+    padding: 200px 0;
+    background-image: url(../img/banner-image.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.banner-child{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.banner-child:hover{
+    transform: translatey(+15%);
+    transition: all 1s ease;
+}
+.banner-left-card,
+.banner-right-card{
+    width: 50%;
+    padding: 0 15px;
+}
+.ban-image{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.banner-icon{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 10%;
+    right: 2%;
+    font-size: 56px;
+    z-index: 1;
+}
+.banner-icon a i{
+    color: var(--sky);
+    padding: 10px 10px;
+    border-radius: 30px;
+}
+/*=====================about==================*/
+.about-child{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.about-left-card,
+.about-right-card{
+    width: 50%;
+    padding: 0 15px;
+}
+.about-details p{
+    font-family: "Roboto", sans-serif;
+    color: var(--black);
+    text-transform: capitalize;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+.abt-image img{
+    border-radius: 20px;
+}
+/*===================skills=====================*/
+.skills-child{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    align-items: center;
+}
+.heding-all p{
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    color: var(--black);
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.sk-card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.skills-left-card,
+.skills-right-card{
+    width: 50%;
+    padding: 0 15px;
+}
+.skills .heading .heading-2{
+    color: var(--sky);
+}
+.sk-card{
+    border-bottom: 5px solid  var(--sky);
+    margin-bottom: 50px;
+}
+.sk-card a{
+   display: inline-block;
+   margin-bottom: 5px;
+}
+.sk-det a{
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+    font-size: 19px;
+    color: var(--blue);
+    font-weight: 700;
+    line-height: 1.1;
+}
+.skills-text{
+    font-family: "Montserrat", sans-serif;
+    color: var(--blue);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+/*===================work==================*/
+.work-layout{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+/*=====================project===============*/
+.pro-child{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.pro-layout{
+    width: calc(33% - 10px);
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+.pro-card{
+    padding: 10px 20px;
+}
+.pro-card .heading-3{
+    color: var(--white);
+}
+.pro-card p{
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+.pro-search{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.pro-layout:hover{
+    background-color: var(--light-sky);
+    color: var(--dark-black);
+    transition: all 1,2s ease;
+}
+/*==================contact=================*/
+.contact-left-card,
+.contact-right-card{
+    width: 50%;
+    padding: 0 15px;
+}
+.contect-child{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.contact-card{
+    margin-left: 68px;
+}
+.contact-details a{
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.contact-details a  span{
+    font-family: "Montserrat", sans-serif;
+    color: var(--blue);
+    margin-left: 10px;
+    font-size: 19px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.contact-details a i{
+    color: var(--white);
+    background-color: var(--dark-blue);
+    padding: 10px 10px;
+    border-radius: 50%;
+}
+.con-text{
+    font-family: "Montserrat", sans-serif;
+    color: var(--black);
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-left: 50px;
+}
+.contact-details a i:hover{
+    color: var(--light-sky);
+    transition: all 1,2s ease;
+    background-color: var(--dark-black);
+}
+.contact-right-card form input{
+    font-family: "Montserrat", sans-serif;
+    width: 60%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 16px;
+    border: 3px solid var(--dark-white);
+}
+.contact-right-card form input:hover{
+    background-color: var(--sky);
+    transition: all 1,2s ease;
+    border: 3px solid var(--blue);
+}
+.contact-right-card form input::placeholder{
+    font-family: "Montserrat", sans-serif;
+    color: var(--black);
+}
+/*=====================footer==================*/
+.footer{
+    padding: 100px 0;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/footer-image.png);
+}
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: var(--white);
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+.footer-logo a{
+    display: block;
+    font-size: 20px;
+}
+.footer-icon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer-icon li{
+    padding: 10px 10px;
+}
+.footer-icon li a i{
+    color: var(--white);
+    font-size: 17px;
+    background-color: var(--dark-blue);
+    padding: 10px 10px;
+    border-radius: 50px;
+}
+.footer-icon li a i:hover{
+    color: var(--light-sky);
+    transition: all 1,2s ease;
+    background-color: var(--white);
+}
+.fot-text{
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: var(--white);
+    margin-top: 10px;
+}
+/*==================responciv===============*/
+@media (min-width:320px) and (max-width:575.99px){
+    /*======================navbar=============*/
+    .nav-menu{
+        display: none;
+    }
+    .nav-text{
+        font-size: 25px;
+    }
+    .nav-menu li{
+        padding: 10px 10px;
+    }
+    .icon{
+        display: block;
+    }
+    .showData{
+        display: block;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+        height: 100%;
+    }
+    /*========================heading===============*/
+    .heading-1{
+        font-size: 30px;
+    }
+    .heading-2{
+        font-size: 25px;
+    }
+    .heading-3{
+        font-size: 23px;
+    }
+    .text-one{
+        font-size: 27px;
+    }
+    /*===================btn====================*/
+    .btn{
+        font-size: 14px;
+        padding: 10px 13px;
+    }
+    /*=======================banner==================*/
+    .banner{
+      padding: 70px 0;
+    }
+    .banner-left-card,
+    .banner-right-card{
+        width: 100%;
+    }
+    .banner-details{
+        /* text-align: center; */
+        margin-bottom: 10px;
+    }
+    /*===================about===================*/
+    .about{
+        padding: 20px 0;
+    }
+    .about-left-card,
+    .about-right-card{
+        width: 100%;
+    }
+    .about-details{
+       text-align: center;
+    }
+    .about-details p{
+        font-size: 12px;
+    }
+    /*====================skills===================*/
+    .skills{
+        padding: 20px 0;
+    }
+    .skills-left-card,
+    .skills-right-card{
+        width: 100%;
+    }
+    .heding-all{
+        width: 100%;
+        text-align: center;
+    }
+    .heding-all p{
+        font-size: 13px;
+    }
+    /*=====================work=======================*/
+    .work{
+        padding: 20px 0;
+    }
+    .work-layout{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    /*======================project===================*/
+    .project{
+        padding: 20px 0;
+    }
+    .pro-child{
+        gap: 10px;
+    }
+    .pro-layout{
+        text-align: center;
+        width: 100%;
+    }
+    .pro-card p{
+        font-size: 12px;
+    }
+    /*=================contact===================*/
+    .contact{
+        padding: 20px 0;
+    }
+    .contact-left-card{
+        margin-bottom: 20px;
+    }
+    .contact-left-card,
+    .contact-right-card{
+        width: 100%;
+    }
+    .contact-card{
+        margin-left: 0px;
+    }
+    .con-text{
+        font-size: 13px;
+    }
+    .contact-card a span{
+        font-size: 15px;
+    }
+    .contact-right-card form input{
+        width: 100%;
+    }
+    /*=====================footer=======================*/
+    .footer{
+        padding: 20px 0;
+    }
+    .fot-text{
+        font-size: 13px;
+    }
+}
+@media (min-width:576px) and (max-width:767.99px){
+    /*======================navbar=============*/
+    .nav-menu{
+        display: none;
+    }
+    .nav-menu li{
+        padding: 10px 10px;
+    }
+    .icon{
+        display: block;
+    }
+    .showData{
+        display: block;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+        height: 100%;
+    }
+    /*=======================banner==================*/
+    .banner{
+      padding: 80px 0;
+    }
+    .banner-left-card,
+    .banner-right-card{
+        width: 100%;
+    }
+    /*===================about===================*/
+    .about{
+        padding: 40px 0;
+    }
+    .about-left-card,
+    .about-right-card{
+        width: 100%;
+    }
+    .about-details{
+       text-align: center;
+    }
+    .abt-image img{
+        width: 100%;
+    }
+    .about-details p{
+        font-size: 12px;
+    }
+    /*====================skills===================*/
+    .skills{
+        padding: 40px 0;
+    }
+    .skills-left-card,
+    .skills-right-card{
+        width: 100%;
+    }
+    .heding-all{
+        width: 100%;
+    }
+    .heding-all p{
+        font-size: 12px;
+    }
+    /*=====================work=======================*/
+    .work{
+        padding: 40px 0;
+    }
+    .work-layout{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    /*======================project===================*/
+    .project{
+        padding: 40px 0;
+    }
+    .pro-child{
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+    .pro-layout{
+       width: calc(50% - 10px);
+    }
+    .pro-card p{
+        font-size: 12px;
+    }
+    /*=================contact===================*/
+    .contact{
+        padding: 40px 0;
+    }
+    .contact-left-card{
+        margin-bottom: 20px;
+    }
+    .contact-left-card,
+    .contact-right-card{
+        width: 100%;
+    }
+    .contact-card{
+        margin-left: 0px;
+    }
+    .con-text{
+        font-size: 13px;
+    }
+    .contact-card a span{
+        font-size: 15px;
+    }
+    .contact-right-card form input{
+        width: 100%;
+    }
+    /*=====================footer=======================*/
+    .footer{
+        padding: 40px 0;
+    }
+}
+@media (min-width:768px) and (max-width:991.99px){
+    /*======================navbar=============*/
+    .nav-menu{
+        display: none;
+    }
+    .nav-menu li{
+        padding: 10px 10px;
+    }
+    .icon{
+        display: block;
+    }
+    .showData{
+        display: block;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+        height: 100%;
+    }
+    /*=======================banner==================*/
+    .banner{
+      padding: 80px 0;
+    }
+    .banner-left-card,
+    .banner-right-card{
+        width: 100%;
+    }
+    /*===================about===================*/
+    .about{
+        padding: 60px 0;
+    }
+    .about-left-card,
+    .about-right-card{
+        width: 100%;
+    }
+    .about-details{
+       text-align: center;
+    }
+    .abt-image img{
+        width: 100%;
+    }
+    .about-details p{
+        font-size: 13px;
+    }
+    /*====================skills===================*/
+    .skills{
+        padding: 60px 0;
+    }
+    .skills-left-card,
+    .skills-right-card{
+        width: 100%;
+    }
+    .heding-all{
+        width: 100%;
+    }
+    .heding-all p{
+        font-size: 13px;
+    }
+    /*=====================work=======================*/
+    .work{
+        padding: 60px 0;
+    }
+    .work-layout{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    /*======================project===================*/
+    .project{
+        padding: 60px 0;
+    }
+    .pro-child{
+        justify-content: center;
+        gap: 10px;
+    }
+    .pro-layout{
+       width: calc(50% - 10px);
+    }
+    .pro-card p{
+        font-size: 15px;
+    }
+    /*=================contact===================*/
+    .contact{
+        padding: 60px 0;
+    }
+    .contact-left-card{
+        margin-bottom: 20px;
+    }
+    .contact-left-card,
+    .contact-right-card{
+        width: 100%;
+    }
+    .contact-card{
+        margin-left: 0px;
+    }
+    .form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    /*=====================footer=======================*/
+    .footer{
+        padding: 60px 0;
+    }
+}
+@media (min-width:992px) and (max-width:1199.99px){
+    /*======================navbar=============*/
+    .nav-menu{
+        display: none;
+    }
+    .nav-menu li{
+        padding: 10px 10px;
+    }
+    .icon{
+        display: block;
+    }
+    .showData{
+        display: block;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+        height: 100%;
+    }
+    /*===================about===================*/
+    .about{
+        padding: 80px 0;
+    }
+    .about-details p{
+        font-size: 14px;
+    }
+    /*===================skills===================*/
+    .skills{
+        padding: 80px 0;
+    }
+    .heding-all p{
+        font-size: 14px;
+    }
+    /*=====================work=======================*/
+    .work{
+        padding: 80px 0;
+    }
+    /*======================project===================*/
+    .project{
+        padding: 80px 0;
+    }
+    .pro-child{
+        justify-content: center;
+        gap: 10px;
+    }
+    .pro-layout{
+       width: calc(50% - 10px);
+    }
+    .pro-card p{
+        font-size: 15px;
+    }
+    /*=====================contact=======================*/
+    .contact{
+        padding: 80px 0;
+    }
+    /*=====================footer=======================*/
+    .footer{
+        padding: 80px 0;
+    }
+}
+@media (min-width:1200px) and (max-width:1399.99px){
+
+}
+
